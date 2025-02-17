@@ -1,0 +1,286 @@
+.mode_container{
+    
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+.mode_container > button{
+    cursor: pointer;
+}
+
+.option_mode{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.option_mode > h1:nth-child(1){
+    color:#9d4edd;
+    font-family:'buble-pixel';
+    font-size:100px;
+    margin:0;
+    margin-bottom: 10px
+}
+.option_mode > h1:nth-child(2){
+    color:white;
+    font-family:'buble-pixel';
+    font-size:100px;
+    margin:0;
+    margin-bottom: 10px
+}
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+.mode{
+    height: 50px;
+    width: 100%;
+    margin: 10px;
+    background-color: rgba(215, 215, 215, 0.121);
+    color: white;
+    border: 1px solid #9d4edd;
+    cursor: pointer;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.334);
+    transition: 0.5s;
+    font-size: 30px;
+    font-family: "VT323", monospace;
+    padding:10px 0;
+}
+.mode:hover{
+    box-shadow: none;
+    transform: translate(3px,3px);
+}
+
+.edit_mode{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.479);
+    width: 100%;
+    height: 100%;
+}
+
+.container_edit--mode{
+    min-width: 300px;
+    min-height: 200px;
+    background-color: black;
+    padding:20px 30px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 30px;
+    transition: 0.2s;
+    animation: zoomIn 0.2s;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.236);
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_edit--mode > h1{
+    font-family: 'buble-pixel';
+    color: #9d4edd;
+}
+
+.interface{
+    display: flex;
+    align-items: center;
+}
+
+.interface > input{
+    background-color: white;
+    border: none;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.interface > h3{
+    margin-right: 50px;
+    width: 70px;
+}
+
+.options_level{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 425px;
+    
+}
+
+.options_level > h3{
+    margin-right: 50px;
+    width: 70px;
+}
+
+.difficulty{
+    
+    border: none;
+    padding:10px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 30px;
+    font-family: 'buble-pixel';
+    background-color: #9d4edd;
+    color: white;
+    margin-top: 10px;
+    
+}
+
+
+
+.size{
+    
+    margin: 0 5px;
+    border: none;
+    padding:10px 10px;
+    background-color: #3c096c;
+    cursor: pointer;
+    font-size: 50px;
+    font-family: 'buble-pixel';
+    color:white;
+    
+}
+
+.size_board{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.size_board > h3{
+    margin-right: 50px;
+    width: 70px;
+}
+
+.create_room{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+.create_room > h3{
+    margin-right: 50px;
+    width: 70px;
+}
+
+
+.code_room{
+    padding:10px;
+    outline-style: none;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.073);
+    color:white;
+   
+}
+
+
+.create_room > button{
+    
+    font-family: 'buble-pixel';
+    width: 70px;
+    height: 40px;
+    border:none;
+    background-color: #c77dff;
+    color: white;
+    cursor: pointer;
+}
+
+.bt_start_game{
+    background-color:#c77dff;
+    color: white;
+    font-family: 'buble-pixel';
+    
+    border: none;
+    
+    margin-top: 30px;
+    padding: 10px 10px;
+    display: none;
+    animation:lightSpeedInLeft 0.5s ease-in-out ;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 40px;
+    
+    border:2px solid black
+    
+}
+
+
+.start_game{
+    display: inline-block;
+    
+}
+
+.unselect{
+    opacity: 30%;
+}
+
+.available{
+    opacity: 100%;
+}
+
+.select{
+    border: 1px solid black;
+}
+
+.time{
+    display: flex;
+    align-items: center;
+    
+}
+.time > h3{
+    margin-right: 50px;
+    width: 70px;
+}
+
+.clip-intro{
+    display:'block';
+    width:500px;
+    
+    padding: 10px 10px;
+    border-radius: 20px;
+    
+}
+#mode{
+    background-image: url('../assest/bg_pixel_2.jpg');
+    background-size: cover;
+    height: 742px;
+}
+
+
+
+
+/************ Repoonsive ******************/
+
+@media only screen and (max-width: 931px) {
+    .background_mode{
+        width: 150px;
+        height: 150px;
+    }
+    .background_mode > img{
+        width: 150px;
+        height: 150px;
+    }
+    .background_mode > img:nth-child(1),
+    .background_mode > img:nth-child(1){
+        margin-top: 40px;
+    }
+    .mode_container > h1{
+        text-align: center;
+        width: 500px;
+    }
+    .container_edit--mode{
+        max-width: 300px;
+    }
+    .clip-intro{
+        width: 300px;
+    }
+    .option_mode > h1{
+        font-size: 30px;
+    }
+
+  }
