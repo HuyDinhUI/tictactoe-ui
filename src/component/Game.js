@@ -16,7 +16,7 @@ const Game=()=>{
     const audioRef = useRef(null);
     // Lấy thông tin URL hiện tại
 
-    const host ="http://localhost:4000"
+    const host ="http://tictactoe_ai.railway.internal"
 
     useEffect(() => {
         
