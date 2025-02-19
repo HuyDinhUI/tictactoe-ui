@@ -25,7 +25,7 @@ const Human=()=>{
     const socketRef = useRef();
     // Lấy thông tin URL hiện tại
 
-    const host ="http://tictactoe_ai.railway.internal"
+    const host ="https://tictactoeai-production.up.railway.app/"
 
     
 
