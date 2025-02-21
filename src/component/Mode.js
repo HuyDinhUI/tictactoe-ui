@@ -228,7 +228,7 @@ const ModePage=()=>{
                         </button>
                         </div>
                         <div class='user'>
-                            <p style={{fontSize:'30px'}}>H</p>
+                            <p class='user-name-short'>H</p>
                         </div>
                     </div>
                 <div class='mode_container'>

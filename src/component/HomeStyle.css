@@ -25,9 +25,9 @@
     width: 400px;
     position: relative;
     border-radius: 50px;
-    
+    flex: 1;
+    padding: 0px 400px;
     font-family: 'buble-pixel';
-    
   }
 
   .tab_navbar{
@@ -72,6 +72,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .user-name-short{
+    font-size: 30px;
+    margin: 0;
   }
   
   .container{
@@ -174,8 +179,6 @@
     
   }
 
-  
-
 
   .options_mode{
     display: flex;
@@ -242,10 +245,61 @@
   padding:20px 20px;
   border-radius: 20px;
 }
-#tutorial > p{
+.tip{
   font-family: "VT323", monospace;
   font-size: 20px;
   text-align: justify;
+  width: 500px;
+  margin: 0;
+}
+
+.video-tutorial{
+  display: block;
+  width: 500px;
+  border-radius: 20px;
+}
+
+/*=============== Responsive ================*/
+
+@media only screen and (max-width: 439px){
+  .Wel > h1:nth-child(1),
+  .Wel > h1:nth-child(2) {
+    font-size: 100px;
+  }
+
+  .navbar{
+    padding: 0px 0px;
+  }
+
+  .tab_navbar{
+    font-size: 13px;
+  }
+  
+  .logo{
+    width: 50px;
+    height: 50px;
+  }
+
+  .user{
+    width: 50px;
+    height: 50px;
+  }
+
+  #tutorial > video{
+    width: 250px;
+  }
+
+  .video-tutorial{
+    width: 250px;
+  }
+
+  .tip{
+    width: 250px;
+  }
+
+  .user-name-short{
+    font-size: 15px;
+  }
 }
 
 

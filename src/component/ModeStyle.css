@@ -106,7 +106,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 425px;
+    width: 100%;
     
 }
 
@@ -126,6 +126,7 @@
     background-color: #9d4edd;
     color: white;
     margin-top: 10px;
+    width: 100%;
     
 }
 
@@ -283,4 +284,39 @@
         font-size: 30px;
     }
 
+  }
+
+  @media only screen and (max-width: 439px){
+
+    .tab_navbar{
+      font-size: 13px;
+    }
+    
+    .logo{
+      width: 50px;
+      height: 50px;
+    }
+  
+    .user{
+      width: 50px;
+      height: 50px;
+    }
+
+    .clip-intro{
+        width: 200px;
+    }
+
+    .option_mode > h1:nth-child(1),
+    .option_mode > h1:nth-child(2){
+        font-size: 40px;
+    }
+
+    .mode{
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .size{
+        font-size: 20px;
+    }
   }

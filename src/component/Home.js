@@ -71,7 +71,7 @@ import 'animate.css';
           </button>
         </div>
         <div class='user'>
-          <p style={{fontSize:'30px'}}>H</p>
+          <p class='user-name-short'>H</p>
         </div>
       </div>
       <div class='container'>
@@ -88,11 +88,11 @@ import 'animate.css';
         
         <div id='tutorial'>
           <h1 style={{fontFamily:'buble-pixel',color:'#c77dff'}}>tutorial</h1>
-          <video style={{display:'block',width:'500px',borderRadius:'20px'}}    autoPlay loop muted >
+          <video class='video-tutorial' autoPlay loop muted >
             <source src={require('../assest/intro.mp4')}></source>
           </video>
           <h3 style={{fontFamily:'buble-pixel',color:'#c77dff'}}>!!!</h3>
-          <p style={{width:'500px',margin:'0'}}>Required size selection. If not selected, the Play button will not appear. You must choose size and color then enter the room code. Enter the room code provided by the room owner then then join.If less than one minute, enter a value starting from 0.9 or less
+          <p class='tip'>Required size selection. If not selected, the Play button will not appear. You must choose size and color then enter the room code. Enter the room code provided by the room owner then then join.If less than one minute, enter a value starting from 0.9 or less
           </p>
         </div>
         
