@@ -289,7 +289,7 @@
   @media only screen and (max-width: 439px){
 
     .tab_navbar{
-      font-size: 13px;
+      font-size: 12px;
     }
     
     .logo{
@@ -303,20 +303,21 @@
     }
 
     .clip-intro{
-        width: 200px;
+        display: none;
     }
 
     .option_mode > h1:nth-child(1),
     .option_mode > h1:nth-child(2){
-        font-size: 40px;
+        font-size: 70px;
     }
 
-    .mode{
-        height: 40px;
-        font-size: 20px;
-    }
+    
 
     .size{
         font-size: 20px;
+    }
+
+    .mode_container{
+        flex-direction: column;
     }
   }
