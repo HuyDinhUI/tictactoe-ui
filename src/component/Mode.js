@@ -26,7 +26,7 @@ const ModePage=()=>{
     const socketRef = useRef();
     // Lấy thông tin URL hiện tại
 
-    const host ="http://localhost:4000"
+    const host ="https://tictactoeai-production.up.railway.app/"
 
     useEffect(() => {
         
@@ -175,8 +175,6 @@ const ModePage=()=>{
             socketRef.current.emit("getDataRoom",{
                 id:code_room,
                 size:size
-                
-                
             })
             navigate(`/Human?id=${code_room}`,{state:{size,id,Sympol}})
         } 
