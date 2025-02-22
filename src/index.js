@@ -7,11 +7,9 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <SpeedInsights>
     <React.StrictMode>
       <App />
     </React.StrictMode>
-  </SpeedInsights>
 );
 
 // If you want to start measuring performance in your app, pass a function

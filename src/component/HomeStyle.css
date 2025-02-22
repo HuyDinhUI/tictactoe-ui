@@ -1,9 +1,89 @@
+
+.login{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.455);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.login-container{
+  
+  background-color:rgba(255, 255, 255, 0.048);
+  border-radius: 20px;
+  border: 2px solid #9d4edd;
+  display: flex;
+  backdrop-filter: blur(2px);
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-avatar{
+  width: 100%;
+  height: 100%;
+  background-color: #9d4edd;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+.login-form{
+  margin-top: 10px;
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  width: 100%;
+  gap:0.5rem;
+}
+
+.login-heading:nth-child(1),
+.login-heading:nth-child(2){
+  margin: 0;
+  font-family: 'buble-pixel';
+  font-size: 50px;
+  color: #9d4edd;
+  -webkit-text-stroke: 2px white;
+}
+
+
+
+.login-input{
+  width: 100%;
+  padding:5px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.312);
+  border: none;
+  outline: none;
+  color: white;
+ 
+}
+
+.input-level{
+  background-color: white;
+  width: 100%;
+}
+
+.login-btn{
+  width: 100%;
+  padding:5px 0px;
+  font-family: 'buble-pixel';
+  color: white;
+  background-color: #9d4edd;
+  font-size: 30px;
+  border: none;
+
+}
+
 .logo{
     width: 72px;
     height: 72px;
   }
   
-
   .Home{
     background-image: url('../assest/bg_pixel_2.jpg');
     background-size: cover;
