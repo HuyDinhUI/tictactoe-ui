@@ -13,6 +13,13 @@ const HomePage = () => {
   const [mode_bot, setMode_bot] = useState(false);
   const [mode_human, setMode_huamn] = useState(false);
   const [mode_chal, setMode_chal] = useState(false);
+  const [login, setLogin] = useState()
+  const [username, setUsername] = useState();
+  const [mail, setMail] = useState();
+  const [old, setOld] = useState();
+  const [gender,setGender] = useState();
+  const [avatar, setAvatar] = useState();
+  
 
   // useEffect(()=>{
   //   if (document.querySelector('.line') && document.querySelector('.tab_navbar')){
@@ -48,37 +55,55 @@ const HomePage = () => {
 
   return (
     <div class="Home">
-      <div class="login">
-        <div class="login-container">
-          {/* <h1 class='login-heading'>ID</h1>
+      {!login && (
+        <div class="login">
+          <div class="login-container">
+            {/* <h1 class='login-heading'>ID</h1>
           <h1 class='login-heading'>CARD</h1> */}
-          <form class="login-form">
-            <img class="login-avatar"></img>
-            <input
-              class="login-input"
-              placeholder="enter your username"
-            ></input>
-            <input class="login-input" placeholder="enter your email"></input>
-            <input class="login-input" placeholder="enter your old"></input>
-            <Tippy
-            placement="bottom-start"
-            visible
-              render={(attrs) => (
-                <div
-                  class='input-level'
-                  tabIndex="-1"
-                  {...attrs}
-                >
-                 <h1>hello</h1>
-                </div>
-              )}
-            >
-              <input class="login-input" placeholder="enter your level"></input>
-            </Tippy>
-            <button class="login-btn">enter</button>
-          </form>
+            <form class="login-form">
+              <div class="login-avatar">
+                {username && <p class="login-avatar-name">{username.slice(0, 1)}</p>}
+              </div>
+              <input
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                class="login-input"
+                placeholder="enter your username"
+              ></input>
+              <input value={mail} onChange={(e) => setMail(e.target.value)} class="login-input" placeholder="enter your email"></input>
+              <input value={old} onChange={(e) => setOld(e.target.value)} class="login-input" placeholder="enter your old"></input>
+              <Tippy
+                placement="bottom-start"
+                interactive
+                render={(attrs) => (
+                  <div class="input-gender" tabIndex="-1" {...attrs}>
+                    <div class="input-gender-wrapper">
+                      <div onClick={()=>{setGender("male")}} class="gender-btn">Male</div>
+                      <div onClick={()=>{setGender("femal")}} class="gender-btn">Female</div>
+                      <div onClick={()=>{setGender("others")}} class="gender-btn">Others</div>
+                    </div>
+                  </div>
+                )}
+              >
+                <input
+                  value={gender}
+                  class="login-input"
+                  placeholder="enter your gender"
+                ></input>
+              </Tippy>
+              <button
+                disabled={!username || !mail || !old || !gender}
+                class="login-btn"
+                onClick={() => {
+                  setLogin("logined");
+                }}
+              >
+                enter
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
+      )}
       <div class="header">
         <img className="logo" src={logo2}></img>
 
