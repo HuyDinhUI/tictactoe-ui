@@ -1,6 +1,6 @@
 import "./HomeStyle.css";
 import { createElement, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../assest/04B_30__.TTF";
 import "animate.css";
 import Tippy from "@tippyjs/react/headless";
@@ -13,13 +13,12 @@ const HomePage = () => {
   const [mode_bot, setMode_bot] = useState(false);
   const [mode_human, setMode_huamn] = useState(false);
   const [mode_chal, setMode_chal] = useState(false);
-  const [login, setLogin] = useState()
+  const [login, setLogin] = useState();
   const [username, setUsername] = useState();
   const [mail, setMail] = useState();
   const [old, setOld] = useState();
-  const [gender,setGender] = useState();
+  const [gender, setGender] = useState();
   const [avatar, setAvatar] = useState();
-  
 
   // useEffect(()=>{
   //   if (document.querySelector('.line') && document.querySelector('.tab_navbar')){
@@ -62,7 +61,9 @@ const HomePage = () => {
           <h1 class='login-heading'>CARD</h1> */}
             <form class="login-form">
               <div class="login-avatar">
-                {username && <p class="login-avatar-name">{username.slice(0, 1)}</p>}
+                {username && (
+                  <p class="login-avatar-name">{username.slice(0, 1)}</p>
+                )}
               </div>
               <input
                 value={username}
@@ -70,17 +71,49 @@ const HomePage = () => {
                 class="login-input"
                 placeholder="enter your username"
               ></input>
-              <input value={mail} onChange={(e) => setMail(e.target.value)} class="login-input" placeholder="enter your email"></input>
-              <input value={old} onChange={(e) => setOld(e.target.value)} class="login-input" placeholder="enter your old"></input>
+              <input
+                value={mail}
+                onChange={(e) => setMail(e.target.value)}
+                class="login-input"
+                placeholder="enter your email"
+              ></input>
+              <input
+                value={old}
+                onChange={(e) => setOld(e.target.value)}
+                class="login-input"
+                placeholder="enter your old"
+              ></input>
               <Tippy
                 placement="bottom-start"
+                trigger="click"
                 interactive
                 render={(attrs) => (
                   <div class="input-gender" tabIndex="-1" {...attrs}>
                     <div class="input-gender-wrapper">
-                      <div onClick={()=>{setGender("male")}} class="gender-btn">Male</div>
-                      <div onClick={()=>{setGender("femal")}} class="gender-btn">Female</div>
-                      <div onClick={()=>{setGender("others")}} class="gender-btn">Others</div>
+                      <div
+                        onClick={() => {
+                          setGender("male");
+                        }}
+                        class="gender-btn"
+                      >
+                        Male
+                      </div>
+                      <div
+                        onClick={() => {
+                          setGender("femal");
+                        }}
+                        class="gender-btn"
+                      >
+                        Female
+                      </div>
+                      <div
+                        onClick={() => {
+                          setGender("others");
+                        }}
+                        class="gender-btn"
+                      >
+                        Others
+                      </div>
                     </div>
                   </div>
                 )}
@@ -108,11 +141,15 @@ const HomePage = () => {
         <img className="logo" src={logo2}></img>
 
         <div class="navbar">
-          <button class="tab_navbar active_tab">home</button>
-          <button class="tab_navbar " onClick={() => navigate(`/About`)}>
+          <Link to="/" class="tab_navbar active_tab">
+            home
+          </Link>
+          <Link to="/About" class="tab_navbar ">
             about me
-          </button>
-          <button class="tab_navbar">report</button>
+          </Link>
+          <Link to="/report" class="tab_navbar">
+            report
+          </Link>
         </div>
         <div class="user">
           <p class="user-name-short">H</p>

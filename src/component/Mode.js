@@ -1,5 +1,5 @@
 import { createElement, useEffect, useState, useRef } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate,Link } from "react-router-dom";
 import "./ModeStyle.css";
 import socketIOClient from "socket.io-client";
 import Board from "./Board";
@@ -169,7 +169,7 @@ const ModePage = () => {
   function JoinRoom() {
     const code_room_join = document.querySelector(".code_room").value;
     const Sympol = false;
-    console.log(size,id)
+    console.log(size, id);
     if (code_room_join) {
       navigate(`/Human?id=${code_room_join}`, { state: { size, id, Sympol } });
     }
@@ -195,13 +195,15 @@ const ModePage = () => {
         <img className="logo" src={logo2}></img>
 
         <div class="navbar">
-          <button class="tab_navbar" onClick={() => navigate(`/`)}>
+          <Link to="/" class="tab_navbar active_tab">
             home
-          </button>
-          <button class="tab_navbar " onClick={() => navigate(`/About`)}>
+          </Link>
+          <Link to="/About" class="tab_navbar ">
             about me
-          </button>
-          <button class="tab_navbar">report</button>
+          </Link>
+          <Link to="/report" class="tab_navbar">
+            report
+          </Link>
         </div>
         <div class="user">
           <p class="user-name-short">H</p>

@@ -34,7 +34,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 60px;
+  font-size: 120px;
   border: 2px solid white;
   box-sizing: border-box;
   
@@ -114,12 +114,16 @@
   background-color: #9d4edd;
   font-size: 30px;
   border: none;
+  transition: 0.5s;
 
 }
 
 .login-btn:hover{
-  animation: pulse 0.5s infinite;
+  background-color: white;
+  color:#9d4edd
 }
+
+/*============ Header ===============*/
 
 .logo{
     width: 72px;
@@ -161,6 +165,7 @@
     transition: 0.5s;
     padding:5px;
     cursor: pointer;
+    text-decoration: none;
   }
 
   
