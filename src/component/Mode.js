@@ -191,24 +191,6 @@ const ModePage = () => {
 
   return (
     <div id="mode">
-      <div class="header">
-        <img className="logo" src={logo2}></img>
-
-        <div class="navbar">
-          <Link to="/" class="tab_navbar active_tab">
-            home
-          </Link>
-          <Link to="/About" class="tab_navbar ">
-            about me
-          </Link>
-          <Link to="/report" class="tab_navbar">
-            report
-          </Link>
-        </div>
-        <div class="user">
-          <p class="user-name-short">H</p>
-        </div>
-      </div>
       <div class="mode_container">
         {/* <button onClick={display_bot} class='mode mode_playerbot'>
                 <div class='background_mode'>

@@ -1,0 +1,79 @@
+ .logo{
+    width: 72px;
+    height: 72px;
+  }
+
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:30px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  .navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    position: relative;
+    border-radius: 50px;
+    flex: 1;
+    padding: 0px 400px;
+    font-family: 'buble-pixel';
+  }
+
+  .tab_navbar{
+    background-color: transparent;
+    border: none;
+    color: #9d4edd84;
+    font-family: 'buble-pixel';
+    font-size: 20px;
+    transition: 0.5s;
+    padding:5px;
+    cursor: pointer;
+  }
+
+  .user{
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    color:white;
+    border:2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  }
+
+  .user-name-short{
+    font-size: 30px;
+    margin: 0;
+  }
+
+/*================ Responsive =================*/
+
+@media only screen and (max-width: 439px){
+   
+    .navbar{
+      padding: 0px 0px;
+    }
+  
+    .tab_navbar{
+      font-size: 11px;
+    }
+    
+    .logo{
+      width: 50px;
+      height: 50px;
+    }
+  
+    .user{
+      width: 50px;
+      height: 50px;
+    }
+
+    .user-name-short{
+      font-size: 15px;
+    }
+  }

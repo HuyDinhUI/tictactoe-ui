@@ -6,59 +6,18 @@ import "animate.css";
 import Tippy from "@tippyjs/react/headless";
 
 const HomePage = () => {
-  const logo = require("../assest/game.png");
   const logo2 = require("../assest/game (1).png");
-  const vs = require("../assest/versus.png");
-  const navigate = useNavigate();
-  const [mode_bot, setMode_bot] = useState(false);
-  const [mode_human, setMode_huamn] = useState(false);
-  const [mode_chal, setMode_chal] = useState(false);
   const [login, setLogin] = useState();
   const [username, setUsername] = useState();
   const [mail, setMail] = useState();
   const [old, setOld] = useState();
   const [gender, setGender] = useState();
   const [avatar, setAvatar] = useState();
-
-  // useEffect(()=>{
-  //   if (document.querySelector('.line') && document.querySelector('.tab_navbar')){
-  //     const tabActive=document.querySelector('.tab_navbar.active_tab')
-  //     const line=document.querySelector('.line')
-  //     line.style.left=tabActive.offsetLeft +'px'
-  //     line.style.width=tabActive.offsetWidth + 'px'
-  //   }
-  // },[])
-
-  const selectDifficulty = (difficulty) => {
-    navigate(`/Game`, { state: { difficulty } });
-  };
-
-  const selectTime = (size) => {
-    const time = document.querySelector(".input_timeout").value;
-    navigate(`/Challenge`, { state: { time, size } });
-  };
-
-  const selectSize = (size) => {
-    navigate(`/Human`, { state: { size } });
-  };
-  function display_bot() {
-    setMode_bot(!mode_bot);
-  }
-  function display_human() {
-    setMode_huamn(!mode_human);
-  }
-
-  function display_chal() {
-    setMode_chal(!mode_chal);
-  }
-
   return (
     <div class="Home">
       {!login && (
         <div class="login">
           <div class="login-container">
-            {/* <h1 class='login-heading'>ID</h1>
-          <h1 class='login-heading'>CARD</h1> */}
             <form class="login-form">
               <div class="login-avatar">
                 {username && (
@@ -137,33 +96,15 @@ const HomePage = () => {
           </div>
         </div>
       )}
-      <div class="header">
-        <img className="logo" src={logo2}></img>
-
-        <div class="navbar">
-          <Link to="/" class="tab_navbar active_tab">
-            home
-          </Link>
-          <Link to="/About" class="tab_navbar ">
-            about me
-          </Link>
-          <Link to="/report" class="tab_navbar">
-            report
-          </Link>
-        </div>
-        <div class="user">
-          <p class="user-name-short">H</p>
-        </div>
-      </div>
       <div class="container">
         <div class="Wel">
           <h1>XO</h1>
           <h1>GAME</h1>
           <p>Created by HuyDinh</p>
 
-          <a href="/Mode" class="page-play op">
+          <Link to="/Mode" class="page-play op">
             play
-          </a>
+          </Link>
           <a href="#tutorial" class="tutorial op">
             tutorial
           </a>

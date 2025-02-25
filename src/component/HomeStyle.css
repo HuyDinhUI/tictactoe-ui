@@ -5,14 +5,15 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.455);
   backdrop-filter: blur(5px);
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
+  top:0;
 }
 
 .login-container{
-  
+  width: 30%;
   background-color:rgba(255, 255, 255, 0.048);
   border-radius: 20px;
   border: 2px solid #9d4edd;
@@ -50,7 +51,7 @@
   margin-top: 10px;
   display: flex;
   display: grid;
-  grid-template-columns: 165px 165px;
+  grid-template-columns: 50% 50%;
   width: 100%;
   gap:0.5rem;
   position: relative;
@@ -83,7 +84,7 @@
 }
 
 .input-gender-wrapper{
-  width: 165px;
+  width: 206.8px;
   display: flex;
   flex-direction: column;
   gap:0.1rem;
@@ -130,10 +131,6 @@
     height: 72px;
   }
   
-  .Home{
-    background-image: url('../assest/bg_pixel_2.jpg');
-    background-size: cover;
-  }
   .header{
     display: flex;
     justify-content: space-between;
@@ -157,7 +154,7 @@
   }
 
   .tab_navbar{
-    
+    background-color: transparent;
     border: none;
     color: #9d4edd84;
     font-family: 'buble-pixel';
@@ -176,8 +173,6 @@
     
   }
 
-
-
   .line{
     height: 3px;
     width: 0;
@@ -192,13 +187,13 @@
   .user{
     width: 70px;
     height: 70px;
-    border-radius: 100%;
     background-color: black;
     color:white;
     border:2px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
   }
 
   .user-name-short{
@@ -306,47 +301,6 @@
     
   }
 
-
-  .options_mode{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    margin-top: 100px;
-    
-  }
-  
-  .close{
-    position: absolute;
-    right: 0;
-    top:0;
-    padding:20px;
-    cursor: pointer;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    background-color: rgba(245, 222, 179, 0);
-    font-family: 'buble-pixel';
-
-  }
-  
-  
-
-.input_timeout{
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  border:none;
-  background-color: #d9d9d956;
-  outline-style: none;
-  padding:5px;
-  border-radius: 20px;
- 
-  
-}
-
 .footer{
   background-color: black;
   height: 200px;
@@ -394,24 +348,6 @@
     font-size: 85px;
   }
 
-  .navbar{
-    padding: 0px 0px;
-  }
-
-  .tab_navbar{
-    font-size: 11px;
-  }
-  
-  .logo{
-    width: 50px;
-    height: 50px;
-  }
-
-  .user{
-    width: 50px;
-    height: 50px;
-  }
-
   #tutorial > video{
     width: 250px;
   }
@@ -424,9 +360,14 @@
     width: 250px;
   }
 
-  .user-name-short{
-    font-size: 15px;
+  .login-container{
+    width: 85%;
   }
+
+  .input-gender-wrapper{
+    width: 161.31px;
+  }
+
 }
 
 

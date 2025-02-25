@@ -1,47 +1,7 @@
-.logo{
-    width: 72px;
-    height: 72px;
-  }
 
-
-  
 .Aboutme{
-    background-color: black;
     transition: 0.5s;
-    background-image: url('../assest/bg_pixel_2.jpg');
-    background-size: cover;
-    
 }
-  
-  .header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:30px;
-    
-  }
-  
-  .navbar{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 400px;
-    position: relative;
-    border-radius: 50px;
-    font-family: 'buble-pixel';
-    
-  }
-
-  .tab_navbar{
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    color: #9d4edd84;
-    font-family: 'buble-pixel';
-    font-size: 20px;
-    transition: 0.5s;
-    padding:5px;
-    
-  }
 
   .active_tab{
     color: #9d4edd;
@@ -58,16 +18,6 @@
     transition: all 0.5s ease;
   }
   
-  .user{
-    width: 70px;
-    height: 70px;
-    border-radius: 100%;
-    background-color: black;
-    color:white;
-    border:2px solid white;
-    margin-right: 10px;
-    
-  }
 
 .info{
     padding-top: 100px;
