@@ -1,0 +1,162 @@
+.login{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.455);
+    backdrop-filter: blur(5px);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    z-index: 999;
+  }
+  
+  .login-container{
+    width: 20%;
+    background-color:rgba(255, 255, 255, 0.048);
+    border-radius: 20px;
+    border: 2px solid #9d4edd;
+    display: flex;
+    backdrop-filter: blur(2px);
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .login-header{
+    margin-bottom: 10px;
+  }
+
+  .header-title{
+    color: white;
+    font-family: "buble-pixel";
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .login-avatar{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    grid-row-start: 1;
+    grid-row-end: 6;
+    color: white;
+    font-family: "buble-pixel";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 120px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    
+  }
+  
+  .login-avatar-name{
+    margin: 0;
+    animation: rubberBand 0.5s;
+    
+  }
+  
+  .login-form{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap:0.5rem;
+    position: relative;
+  }
+  
+  .login-heading:nth-child(1),
+  .login-heading:nth-child(2){
+    margin: 0;
+    font-family: 'buble-pixel';
+    font-size: 50px;
+    color: #9d4edd;
+    -webkit-text-stroke: 2px white;
+  }
+  
+  
+  .login-input{
+    width: 100%;
+    padding:10px;
+    box-sizing: border-box;
+    background-color: #9d4edd1d;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: "VT323", monospace;
+   
+  }
+  
+  .input-gender{
+    
+  }
+  
+  .input-gender-wrapper{
+    width: 206.8px;
+    display: flex;
+    flex-direction: column;
+    gap:0.1rem;
+    background-color: white;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  .gender-btn{
+    background-color:transparent;
+    padding:5px;
+    border: 1px solid #9d4edd;
+    font-family: "VT323", monospace;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .gender-btn:hover{
+    background-color: #9d4edd;
+    color: white;
+  }
+  
+  .login-btn{
+    width: 100%;
+    padding:5px 0px;
+    font-family: 'buble-pixel';
+    color: white;
+    background-color: #9d4edd;
+    font-size: 30px;
+    border: none;
+    transition: 0.5s;
+  
+  }
+
+  .signup-btn{
+    width: 100%;
+    padding:5px 0px;
+    font-family: 'buble-pixel';
+    color: white;
+    background-color: #c592ef;
+    font-size: 30px;
+    border: none;
+    transition: 0.5s;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .login-btn:hover{
+    background-color: white;
+    color:#9d4edd
+  }
+
+  /*=============== Responsive ===============*/
+
+  @media only screen and (max-width: 439px){
+    
+    .login-container{
+      width: 85%;
+    }
+  
+    .input-gender-wrapper{
+      width: 161.31px;
+    }
+  
+  }

@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom';
 import { findBestMove,MCTS, handle_winner, handle_winner_5x5 ,easy_AI, findBestMove_AI_hard, findBestMove_AI_medium, checkWinner, mcts, bot_extreme} from "../helpers";
 import Board from "./Board";
 import { Howl } from 'howler';
-import createWorker from "./worker";
 import socketIOClient from "socket.io-client";
 
 

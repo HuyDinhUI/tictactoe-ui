@@ -44,11 +44,16 @@
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    cursor: pointer;
   }
 
   .user-name-short{
     font-size: 30px;
     margin: 0;
+  }
+
+  .menu-user{
+    z-index: 997;
   }
 
 /*================ Responsive =================*/

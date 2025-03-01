@@ -3,8 +3,20 @@ import styles from "./header.module.css";
 import Tippy from "@tippyjs/react/headless";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear, faRightFromBracket, faUser } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthContext";
+
 const Header = ({ username = "" }) => {
+  const navigate = useNavigate()
   const logo2 = require("../../../assest/game (1).png");
+  const {setIsLoggedIn} = useContext(AuthContext)
+  const nameShort=JSON.parse(localStorage.getItem("token")).name
+  const HandleSignOut = () =>{
+    setIsLoggedIn(false)
+    localStorage.removeItem("token")
+   
+  }
 
   return (
     <div className={styles.header}>
@@ -22,8 +34,8 @@ const Header = ({ username = "" }) => {
       </div>
       <Tippy
         placement="bottom-end"
-        trigger="click"
         interactive
+        delay={500}
         render={(attrs) => (
           <div className={styles["menu-user"]} tabIndex="-1" {...attrs}>
             <div className={styles["menu-user--container"]}>
@@ -36,7 +48,7 @@ const Header = ({ username = "" }) => {
                   <FontAwesomeIcon className={styles["menu-icon"]} icon={faGear}></FontAwesomeIcon>
                   <p className={styles["menu-title"]}>Setting</p>
                 </button>
-                <button className={styles["menu-btn"]}>
+                <button onClick={HandleSignOut} className={styles["menu-btn"]}>
                   <FontAwesomeIcon className={styles["menu-icon"]} icon={faRightFromBracket}></FontAwesomeIcon>
                   <p className={styles["menu-title"]}>Sign out</p>
                 </button>
@@ -46,7 +58,7 @@ const Header = ({ username = "" }) => {
         )}
       >
         <div className={styles.user}>
-          <p className={styles["user-name-short"]}>H</p>
+          <p className={styles["user-name-short"]}>{nameShort.slice(0,1).toUpperCase()}</p>
         </div>
       </Tippy>
     </div>

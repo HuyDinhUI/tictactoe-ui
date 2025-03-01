@@ -3,99 +3,11 @@ import { createElement, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../assest/04B_30__.TTF";
 import "animate.css";
-import Tippy from "@tippyjs/react/headless";
 
 const HomePage = () => {
-  const logo2 = require("../assest/game (1).png");
-  const [login, setLogin] = useState();
-  const [username, setUsername] = useState();
-  const [mail, setMail] = useState();
-  const [old, setOld] = useState();
-  const [gender, setGender] = useState();
-  const [avatar, setAvatar] = useState();
+  
   return (
     <div class="Home">
-      {!login && (
-        <div class="login">
-          <div class="login-container">
-            <form class="login-form">
-              <div class="login-avatar">
-                {username && (
-                  <p class="login-avatar-name">{username.slice(0, 1)}</p>
-                )}
-              </div>
-              <input
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                class="login-input"
-                placeholder="enter your username"
-              ></input>
-              <input
-                value={mail}
-                onChange={(e) => setMail(e.target.value)}
-                class="login-input"
-                placeholder="enter your email"
-              ></input>
-              <input
-                value={old}
-                onChange={(e) => setOld(e.target.value)}
-                class="login-input"
-                placeholder="enter your old"
-              ></input>
-              <Tippy
-                placement="bottom-start"
-                trigger="click"
-                interactive
-                render={(attrs) => (
-                  <div class="input-gender" tabIndex="-1" {...attrs}>
-                    <div class="input-gender-wrapper">
-                      <div
-                        onClick={() => {
-                          setGender("male");
-                        }}
-                        class="gender-btn"
-                      >
-                        Male
-                      </div>
-                      <div
-                        onClick={() => {
-                          setGender("femal");
-                        }}
-                        class="gender-btn"
-                      >
-                        Female
-                      </div>
-                      <div
-                        onClick={() => {
-                          setGender("others");
-                        }}
-                        class="gender-btn"
-                      >
-                        Others
-                      </div>
-                    </div>
-                  </div>
-                )}
-              >
-                <input
-                  value={gender}
-                  class="login-input"
-                  placeholder="enter your gender"
-                ></input>
-              </Tippy>
-              <button
-                disabled={!username || !mail || !old || !gender}
-                class="login-btn"
-                onClick={() => {
-                  setLogin("logined");
-                }}
-              >
-                enter
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
       <div class="container">
         <div class="Wel">
           <h1>XO</h1>
