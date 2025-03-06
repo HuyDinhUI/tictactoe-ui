@@ -4,11 +4,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
       <App />
+      <ToastContainer position="bottom-left" theme="colored" />
     </React.StrictMode>
 );
 

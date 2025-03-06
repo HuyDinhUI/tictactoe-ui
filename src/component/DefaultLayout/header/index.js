@@ -8,10 +8,9 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthContext";
 
 const Header = ({ username = "" }) => {
-  const navigate = useNavigate()
   const logo2 = require("../../../assest/game (1).png");
   const {setIsLoggedIn} = useContext(AuthContext)
-  const nameShort=localStorage.getItem("token")? JSON.parse(localStorage.getItem("token")).name : ""
+  const nameShort=localStorage.getItem("token")? JSON.parse(localStorage.getItem("token")).username : ""
   const HandleSignOut = () =>{
     setIsLoggedIn(false)
     localStorage.removeItem("token")
