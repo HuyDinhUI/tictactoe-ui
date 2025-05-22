@@ -31,7 +31,7 @@ const Play = () => {
       <div className={styles.content}>
         <div className={styles["mode-list"]}>
           <Card className={styles["mode-item"]}>
-            <h2>Player vs Computer</h2>
+            <h4>Player vs Computer</h4>
             <div className={styles["mode-item-content"]}>
               <div className={styles.difficulty}>
                 {difficulty_list.map((item, index) => {

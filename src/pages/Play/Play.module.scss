@@ -9,9 +9,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 
-    h2 {
+    h4 {
       text-transform: uppercase;
       color: var(--black);
+      font-family: var(--font-text-heading);
+      margin: 10px 0;
+
     }
 
     .mode-item-content {
