@@ -1,0 +1,104 @@
+.container {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .Wel {
+      width: 100%;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & > h1:nth-child(1) {
+        padding: 10px;
+        margin: 0;
+        font-family: var(--font-text-heading);
+        font-size: 150px;
+        display: block;
+        height: 100%;
+        text-align: center;
+        color: white;
+        line-height: normal;
+      }
+      & > h1:nth-child(2) {
+        padding: 10px;
+        margin: 0;
+        font-family: var(--font-text-heading);
+        font-size: 150px;
+        display: block;
+        height: 100%;
+        text-align: center;
+        color: #9d4edd;
+        line-height: normal;
+      }
+      & > p {
+        color: white;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 20px;
+        font-size: large;
+      }
+
+      & > a {
+        font-size: larger;
+      }
+    }
+
+    #tutorial {
+      margin-top: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      padding: 20px 20px;
+      border-radius: 20px;
+
+      .tip {
+        font-size: 20px;
+        text-align: justify;
+        width: 500px;
+        margin: 0;
+        color: var(--black);
+      }
+
+      .video-tutorial {
+        display: block;
+        width: 500px;
+        border-radius: 20px;
+      }
+    }
+
+    /*=============== Responsive ================*/
+
+    @media only screen and (max-width: 439px) {
+      .Wel > h1:nth-child(1),
+      .Wel > h1:nth-child(2) {
+        font-size: 85px;
+      }
+
+      #tutorial > video {
+        width: 250px;
+      }
+
+      .video-tutorial {
+        width: 250px;
+      }
+
+      .tip {
+        width: 250px;
+      }
+
+      .login-container {
+        width: 85%;
+      }
+
+      .input-gender-wrapper {
+        width: 161.31px;
+      }
+    }
+  }
+}

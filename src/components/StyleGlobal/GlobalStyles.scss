@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+ZA:wght@100..400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+@font-face {
+  font-family: "puble-pixel";
+  src: url("../../assets/Fonts/04B_30__.TTF");
+}
+
+:root {
+  --sand-light: #e1dad0;
+  --begie: #b3a072;
+  --brown: #605948;
+  --dark-brown: #301e1e;
+  --antiquewhite: #faebd7;
+  --black: black;
+  --white: #fff;
+  --text-color: var(--white);
+  --font-text-heading: "puble-pixel";
+  --font-text: "VT323", monospace;
+  --width-default: 95%;
+  --fail-color: #f21b3f;
+  --success-color: #29bf12;
+  --grey: #d3cece;
+  --blue: #00b4d8;
+  --yellow: #fca311;
+  --dark-blue: #023047;
+  --purple:#9d4edd;
+  --dark-purple:#3c096c;
+  --light-purple:#c77dff;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  ::-webkit-scrollbar {
+    width: 3px; /* Chiều rộng của thanh cuộn dọc */
+    height: 3px; /* Chiều cao của thanh cuộn ngang */
+    border-radius: none;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Màu nền track */
+    border-radius: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--black); /* Màu nút kéo */
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Hover */
+  }
+}
+
+body {
+  font-family: var(--font-text);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-image: url('../../assets/Images/bg_pixel.png');
+  background-size: cover;
+}
+
+button,
+input,
+[tabindex] {
+  outline: none;
+  border: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a[href] {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.awssld {
+  --slider-height-percentage: 400px;
+  --slider-transition-duration: 500ms;
+  --organic-arrow-thickness: 4px;
+  --organic-arrow-border-radius: 0px;
+  --organic-arrow-height: 40px;
+  --organic-arrow-color: var(--white);
+  --control-button-width: 20%;
+  --control-button-height: 25%;
+  --control-button-background: transparent;
+  --control-bullet-color: var(--black);
+  --control-bullet-active-color: var(--begie);
+  --loader-bar-color: var(--white);
+  --loader-bar-height: 6px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
