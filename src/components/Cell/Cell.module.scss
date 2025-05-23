@@ -1,0 +1,12 @@
+.game-cell {
+  width: 100%;
+  height: 100%;
+  background-color: var(--cell-color);
+
+  p{
+    color: var(--black);
+    font-family: var(--font-text-heading);
+    font-size: large;
+    
+  }
+}

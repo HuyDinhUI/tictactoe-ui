@@ -1,3 +1,4 @@
+import Play from "../Play";
 import styles from "./Home.module.scss";
 import { Link } from "react-router-dom";
 
@@ -30,23 +31,8 @@ const Home = () => {
             less than one minute, enter a value starting from 0.9 or less
           </p>
         </div>
-        {/* <div className="footer">
-          <div className="button">
-            <a
-              href="https://www.instagram.com/huy_jh?igsh=MXZxOWY1MjAxOWJwZg%3D%3D&utm_source=qr"
-              className="link-social"
-            >
-              <i className="fa-brands fa-instagram"></i>
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=100035017985628&mibextid=2JQ9oc"
-              className="link-social"
-            >
-              <i className="fa-brands fa-facebook"></i>
-            </a>
-          </div>
-        </div> */}
       </div>
+      <Play/>
     </div>
   );
 };
